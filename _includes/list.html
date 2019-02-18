@@ -1,4 +1,12 @@
 <div id="list" class="pure-u-1">
+
+  {% for post in site.posts %}
+  <li class="pure-menu-item">
+    <a href="{{ post.url | prepend: site.baseurl }}" class="pure-menu-link"
+    >{{ post.title }}</a
+    >
+  </li>
+  {% endfor %}
   <div class="email-item email-item-selected pure-g">
     <div class="pure-u">
       <img
